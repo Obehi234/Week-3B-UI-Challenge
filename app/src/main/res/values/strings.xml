@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Week3 B</string>
+    <string name="heart_icon">Heart Icon</string>
+    <string name="good_morning">Good morning!</string>
+    <string name="notification_icon">Notification icon</string>
+    <string name="notification_number">Notification Number</string>
+    <string name="searchbar_text">Search for celebrants...</string>
+    <string name="searchbar_hint">Search</string>
+    <string name="carousel_image">Carousel Image</string>
+    <string name="carousel_img_1">carousel_img_1</string>
+    <string name="image_carousel">Image carousel</string>
+    <string name="nested_scroll_view">Nested Scroll View</string>
+    <string name="birthday_celebrant">Birthday Celebrant</string>
+    <string name="another_birthday_celebrant">Another birthday celebrant</string>
+    <string name="upcoming_birthdays">Upcoming Birthdays</string>
+    <string name="edit_icon">edit Icon</string>
+    <string name="share_icon">share Icon</string>
+    <string name="phone_icon">phone icon</string>
+    <string name="message_icon">message icon</string>
+    <string name="yaay">Yaay!</string>
+    <string name="it_s_victor_s_birthday">It\'s Victor\'s Birthday</string>
+    <string name="confetti">confetti</string>
+    <string name="ololade_asake">Ololade Asake</string>
+    <string name="celebrant_profile">Celebrant profile</string>
+    <string name="birthdate1">29. 01. 2023</string>
+    <string name="cake_image">cake image</string>
+    <string name="calender_image">Calender image</string>
+    <string name="_20_days_left">20 days left</string>
+</resources>

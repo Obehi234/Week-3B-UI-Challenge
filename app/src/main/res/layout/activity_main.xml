@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/heart_icon"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/GoodMorning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/UI_margin_start"
+        android:layout_marginTop="@dimen/UI_margin_top"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/good_morning"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/heart_icon"
+        android:layout_width="@dimen/heart_icon_size"
+        android:layout_height="@dimen/heart_icon_size"
+        android:layout_marginStart="@dimen/heart_icon_margin_start"
+        android:layout_marginTop="@dimen/heart_icon_margin_top"
+        android:contentDescription="@string/heart_icon"
+        app:layout_constraintStart_toEndOf="@+id/GoodMorning"
+        app:layout_constraintTop_toTopOf="@+id/GoodMorning"
+        app:srcCompat="@drawable/hearts" />
+
+    <ImageView
+        android:id="@+id/notification"
+        android:layout_width="@dimen/heart_icon_size"
+        android:layout_height="@dimen/heart_icon_size"
+        android:layout_marginEnd="@dimen/notification_margin_end"
+        android:contentDescription="@string/notification_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GoodMorning"
+        app:srcCompat="@drawable/notification" />
+
+    <ImageView
+        android:id="@+id/notification_number"
+        android:layout_width="@dimen/notification_number_size"
+        android:layout_height="@dimen/notification_number_size"
+        android:layout_marginTop="@dimen/notification_number_margin"
+        android:layout_marginEnd="@dimen/notification_number_margin"
+        android:contentDescription="@string/notification_number"
+        app:layout_constraintEnd_toStartOf="@+id/notification"
+        app:layout_constraintTop_toTopOf="@+id/notification"
+        app:srcCompat="@drawable/num1" />
+
+    <EditText
+        android:id="@+id/searchbar"
+        android:layout_width="@dimen/searchbar_final_width"
+        android:layout_height="@dimen/searchbar_height"
+        android:layout_marginTop="@dimen/searchbar_margin_top"
+        android:background="@color/searchbar_bg"
+        android:drawableEnd="@drawable/baseline_search_24"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/searchbar_hint"
+        android:importantForAutofill="no"
+        android:includeFontPadding="true"
+        android:inputType="textPersonName"
+        android:labelFor="@id/searchbar"
+        android:paddingStart="@dimen/search_hint_padding"
+        android:paddingEnd="@dimen/search_icon_padding"
+        android:text="@string/searchbar_text"
+        android:textColor="@color/searchbar_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GoodMorning"
+        tools:ignore="LabelFor" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/NestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scroll_weight"
+        android:layout_marginTop="@dimen/UI_margin_top"
+        android:contentDescription="@string/nested_scroll_view"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rel_display"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/constraint_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchbar">
+
+            <ImageView
+                android:id="@+id/slider_img_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_marginStart="@dimen/img_margin_start"
+                android:layout_marginTop="@dimen/img_margin_top"
+                android:layout_marginEnd="@dimen/img_margin_end"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/birthday2"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/editIcon"
+                android:layout_width="@dimen/icon_dimension"
+                android:layout_height="@dimen/icon_dimension"
+                android:layout_marginTop="@dimen/edit_icon_margin_top"
+                android:layout_marginEnd="@dimen/edit_icon_margin_end"
+                android:contentDescription="@string/edit_icon"
+                app:layout_constraintEnd_toEndOf="@id/slider_img_1"
+                app:layout_constraintTop_toTopOf="@id/slider_img_1"
+                app:srcCompat="@drawable/edit" />
+
+
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="@dimen/display_width"
+                android:layout_height="@dimen/display_height"
+                android:layout_marginTop="@dimen/display_margin_top"
+                android:layout_marginEnd="@dimen/display_margin_end"
+                android:backgroundTint="@android:color/darker_gray"
+                android:gravity="center_horizontal"
+                android:text="@string/yaay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/display_text_size"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="@+id/slider_img_1"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/slider_img_1"
+                app:layout_constraintTop_toTopOf="@id/slider_img_1"
+                tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/display_message"
+                android:layout_width="@dimen/display_message_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/UI_margin_start"
+                android:layout_marginTop="@dimen/display_message_margin_top"
+                android:backgroundTint="@android:color/darker_gray"
+                android:gravity="center"
+                android:text="@string/it_s_victor_s_birthday"
+                android:textColor="@color/white"
+                android:textSize="@dimen/display_message_textsize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/slider_img_1"
+                app:layout_constraintHorizontal_bias="0.678"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/display"
+                tools:ignore="RelativeOverlap,TextContrastCheck" />
+
+            <ImageView
+                android:id="@+id/confetti"
+                android:layout_width="@dimen/confetti_width"
+                android:layout_height="@dimen/confetti_height"
+                android:layout_marginEnd="@dimen/confetti_margin_end"
+                android:layout_marginBottom="@dimen/confetti_margin_bottom"
+                android:contentDescription="@string/confetti"
+                app:layout_constraintTop_toTopOf="@id/display"
+                app:layout_constraintStart_toEndOf="@id/display"
+                app:srcCompat="@drawable/confetti"
+                tools:ignore="ImageContrastCheck" />
+
+
+            <ImageView
+                android:id="@+id/phone"
+                android:layout_width="@dimen/icon_dimension"
+                android:layout_height="@dimen/icon_dimension"
+                android:layout_marginStart="@dimen/icon_margin_start"
+                android:layout_marginTop="@dimen/icon_margin_top"
+                android:contentDescription="@string/phone_icon"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/slider_img_1"
+                app:layout_constraintTop_toBottomOf="@+id/display_message"
+                app:srcCompat="@drawable/phoneicon" />
+
+            <ImageView
+                android:id="@+id/message_icon"
+                android:layout_width="@dimen/icon_dimension"
+                android:layout_height="@dimen/icon_dimension"
+                android:layout_marginStart="@dimen/share_margin_start"
+                android:layout_marginTop="@dimen/icon_margin_top"
+                android:contentDescription="@string/message_icon"
+                app:layout_constraintStart_toEndOf="@id/phone"
+                app:layout_constraintTop_toBottomOf="@id/display_message"
+                app:srcCompat="@drawable/msg" />
+
+            <ImageView
+                android:id="@+id/share_icon"
+                android:layout_width="@dimen/icon_dimension"
+                android:layout_height="@dimen/icon_dimension"
+                android:layout_marginTop="@dimen/icon_margin_top"
+                android:layout_marginEnd="@dimen/icon_margin_start"
+                android:contentDescription="@string/share_icon"
+                app:layout_constraintEnd_toEndOf="@id/slider_img_1"
+                app:layout_constraintTop_toBottomOf="@id/display_message"
+                app:srcCompat="@drawable/share" />
+
+            <TextView
+                android:id="@+id/upcoming_birthdays"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/upcoming_birthday_height"
+                android:layout_marginStart="@dimen/icon_margin_top"
+                android:layout_marginTop="@dimen/upcoming_birthday_margin_top"
+                android:layout_marginBottom="@dimen/upcoming_birthday_margin_bottom"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/upcoming_birthdays"
+                android:textSize="@dimen/display_message_textsize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/slider_img_1"
+                app:layout_constraintVertical_bias="0.1"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/celebrant_profile"
+                android:layout_width="@dimen/celebrant_profile_dimension"
+                android:layout_height="@dimen/celebrant_profile_dimension"
+                android:layout_marginStart="@dimen/celebrant_profile_margin_start"
+                android:layout_marginTop="@dimen/celebrant_profile_margin_top"
+                android:layout_marginBottom="@dimen/celebrant_margin_bottom"
+                android:contentDescription="@string/celebrant_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upcoming_birthdays"
+                app:srcCompat="@drawable/person1" />
+
+            <TextView
+                android:id="@+id/Celebrant1"
+                android:layout_width="@dimen/celebrant1_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/celebrant1_margin_start"
+                android:layout_marginTop="@dimen/celebrant1_margin_top"
+                android:text="@string/ololade_asake"
+                android:textSize="@dimen/celebrant1_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/celebrant_profile"
+                app:layout_constraintTop_toTopOf="@id/celebrant_profile"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/cakeImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cakeImg_margin_start"
+                android:layout_marginTop="@dimen/cakeImg_margin_top"
+                android:contentDescription="@string/cake_image"
+                app:layout_constraintStart_toEndOf="@id/celebrant_profile"
+                app:layout_constraintTop_toBottomOf="@id/Celebrant1"
+                app:srcCompat="@drawable/cake" />
+
+            <TextView
+                android:id="@+id/cake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cake_margin_start"
+                android:layout_marginTop="@dimen/cake_margin_top"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/birthdate1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/cake_textsize"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@+id/cakeImg"
+                app:layout_constraintTop_toBottomOf="@+id/Celebrant1" />
+
+            <ImageView
+                android:id="@+id/calender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/calender_margin_start"
+                android:layout_marginTop="@dimen/calender_margin_top"
+                android:contentDescription="@string/calender_image"
+                app:layout_constraintStart_toEndOf="@id/celebrant_profile"
+                app:layout_constraintTop_toBottomOf="@+id/cakeImg"
+                android:layout_marginBottom="@dimen/calender_margin_bottom"
+                app:srcCompat="@drawable/calender"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/days_left"
+                android:layout_width="@dimen/days_left_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/days_left_margin_start"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/_20_days_left"
+                android:textSize="@dimen/days_left_textsize"
+                android:layout_marginBottom="@dimen/days_left_margin_bottom"
+                app:layout_constraintStart_toEndOf="@id/calender"
+                app:layout_constraintTop_toTopOf="@id/calender" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
