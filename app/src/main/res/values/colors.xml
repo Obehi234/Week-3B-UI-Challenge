@@ -10,4 +10,5 @@
     <color name="title_color">#393939</color>
     <color name="searchbar_bg">#FAFAFA</color>
     <color name="searchbar_text_color">#323232</color>
+    <color name="celebrant_card_icon_color">#560BAD</color>
 </resources>

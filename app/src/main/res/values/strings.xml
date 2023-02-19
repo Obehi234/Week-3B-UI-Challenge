@@ -20,10 +20,11 @@
     <string name="yaay">Yaay!</string>
     <string name="it_s_victor_s_birthday">It\'s Victor\'s Birthday</string>
     <string name="confetti">confetti</string>
-    <string name="ololade_asake">Ololade Asake</string>
+    <string name="celebrant_name">Samuel Garfield</string>
     <string name="celebrant_profile">Celebrant profile</string>
-    <string name="birthdate1">29. 01. 2023</string>
+    <string name="birthdate1">20. 10. 2020</string>
     <string name="cake_image">cake image</string>
     <string name="calender_image">Calender image</string>
-    <string name="_20_days_left">20 days left</string>
+    <string name="_20_days_left">30 days left</string>
+    <string name="celebrant_cake_icon">celebrant cake icon</string>
 </resources>
