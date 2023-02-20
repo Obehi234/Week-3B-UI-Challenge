@@ -258,6 +258,7 @@
                 android:layout_height="@dimen/celebrant_card_height"
                 android:layout_width="@dimen/celebrant_card_width"
                 android:layout_marginStart="@dimen/celebrant_card_margin_start"
+                android:layout_marginEnd="@dimen/celebrant_card_margin_end"
                 app:layout_constraintStart_toEndOf="@id/celebrant_profile"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/celebrant_profile">

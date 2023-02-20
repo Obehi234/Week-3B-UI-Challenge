@@ -110,4 +110,5 @@
     <dimen name="celebrant_card_outline_icon_width">2dp</dimen>
     <dimen name="celebrant_card_outline_icon_height">52.46dp</dimen>
     <dimen name="outline_margin">18.36dp</dimen>
+    <dimen name="celebrant_card_margin_end">28dp</dimen>
 </resources>
